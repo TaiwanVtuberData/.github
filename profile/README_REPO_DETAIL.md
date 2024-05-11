@@ -4,7 +4,7 @@
 
 網址：https://github.com/TaiwanVtuberData/TaiwanVTuberData.github.io
 
-網頁原始碼，以 preact 編寫靜態網頁並部署於 GitHub Pages。
+網頁原始碼，以 TypeScript + preact 編寫靜態網頁並部署於 GitHub Pages。
 
 ## TaiwanVTuberTrackingDataJson
 
