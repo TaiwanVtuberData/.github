@@ -4,7 +4,7 @@
 
 # 系統架構
 
-![](./image/structurizr-1-SystemLandscape.svg)
+![](./image/structurizr-1-SystemLandscape.png)
 
 架構說明請參閱[架構文件](./README_ARCHITECTURE.md)。
 
