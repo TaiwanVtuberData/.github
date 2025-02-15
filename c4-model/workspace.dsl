@@ -4,7 +4,7 @@ workspace {
         user = person "網頁使用者"
         
         group "臺灣 VTuber 列表" {
-            vTuberListMatainer = person "VTuber 名單維護者" "維護 VTuber 名單"
+            vTuberListMaintainer = person "VTuber 名單維護者" "維護 VTuber 名單"
             dataFetchScheduler = softwareSystem "VTuber 資料撈取" "定期從 YouTube Data API、Twitch Data API 取得 VTuber 各項資料"
             generateJsonScheduler = softwareSystem "VTuber 資料格式轉換" "定期將 VTuber 資料由 CSV 轉換為 JSON 格式"
             website = softwareSystem "臺灣 VTuber 列表網頁" "提供 VTuber 各項資料"
@@ -30,11 +30,15 @@ workspace {
             vTuberDataStaticallyApiService = softwareSystem "VTuber 資料 (Statically API)" "提供 VTuber 最新資料 API" "Existing System"
         }
         
+        group "jsDelivr" {
+            vTuberDataJsDelivrApiService = softwareSystem "VTuber 資料 (jsDelivr API)" "提供 VTuber 最新資料 API" "Existing System"
+        }
+        
         # relationship
         user -> website "使用網頁"
         
-        vTuberListMatainer -> csvGitRepo "維護 VTuber 名單"
-        vTuberListMatainer -> vTuberDebutGitRepo "維護出道 VTuber 資料"
+        vTuberListMaintainer -> csvGitRepo "維護 VTuber 名單"
+        vTuberListMaintainer -> vTuberDebutGitRepo "維護出道 VTuber 資料"
         
         dataFetchScheduler -> youTubeDataApi "取得 VTuber 頻道資料"
         dataFetchScheduler -> twitchApi "取得 VTuber 頻道資料"
@@ -47,18 +51,18 @@ workspace {
         website -> githubApi "取得 Git commit 紀錄"
         website -> vTuberDataGithubApiService "取得 VTuber 最新資料 API"
         website -> vTuberDataStaticallyApiService "取得 VTuber 最新資料 API"
+        website -> vTuberDataJsDelivrApiService "取得 VTuber 最新資料 API"
         
         githubApi -> jsonGitRepo "取得 Git commit 紀錄"
         
         vTuberDataGithubApiService -> jsonGitRepo "取得 VTuber 最新資料"
-        
         vTuberDataStaticallyApiService -> jsonGitRepo "取得 VTuber 最新資料"
+        vTuberDataJsDelivrApiService -> jsonGitRepo "取得 VTuber 最新資料"
     }
 
     views {
         systemlandscape "SystemLandscape" {
             include *
-            autoLayout
         }
         
         systemContext website "SystemContext" {
