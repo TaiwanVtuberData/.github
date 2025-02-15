@@ -4,7 +4,7 @@
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2025-02-15T12:35:52Z",
+  "lastModifiedDate" : "2025-02-15T12:53:24Z",
   "model" : {
     "people" : [ {
       "id" : "1",
@@ -15,16 +15,16 @@
       },
       "relationships" : [ {
         "description" : "使用網頁",
-        "destinationId" : "5",
-        "id" : "15",
+        "destinationId" : "2",
+        "id" : "19",
         "sourceId" : "1",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
     }, {
       "description" : "維護 VTuber 名單",
-      "group" : "臺灣 VTuber 列表",
-      "id" : "2",
+      "group" : "維護者",
+      "id" : "3",
       "location" : "Unspecified",
       "name" : "VTuber 名單維護者",
       "properties" : {
@@ -32,84 +32,30 @@
       },
       "relationships" : [ {
         "description" : "維護 VTuber 名單",
-        "destinationId" : "10",
-        "id" : "16",
-        "sourceId" : "2",
+        "destinationId" : "11",
+        "id" : "20",
+        "sourceId" : "3",
         "tags" : "Relationship"
       }, {
         "description" : "維護出道 VTuber 資料",
-        "destinationId" : "12",
-        "id" : "17",
-        "sourceId" : "2",
+        "destinationId" : "13",
+        "id" : "21",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "description" : "維護廣告資料",
+        "destinationId" : "16",
+        "id" : "22",
+        "sourceId" : "3",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
     } ],
     "softwareSystems" : [ {
-      "description" : "定期從 YouTube Data API、Twitch Data API 取得 VTuber 各項資料",
-      "documentation" : { },
-      "group" : "臺灣 VTuber 列表",
-      "id" : "3",
-      "location" : "Unspecified",
-      "name" : "VTuber 資料撈取",
-      "properties" : {
-        "structurizr.dsl.identifier" : "datafetchscheduler"
-      },
-      "relationships" : [ {
-        "description" : "取得 VTuber 頻道資料",
-        "destinationId" : "6",
-        "id" : "18",
-        "sourceId" : "3",
-        "tags" : "Relationship"
-      }, {
-        "description" : "取得 VTuber 頻道資料",
-        "destinationId" : "7",
-        "id" : "19",
-        "sourceId" : "3",
-        "tags" : "Relationship"
-      }, {
-        "description" : "儲存 VTuber 各項資料 (CSV)",
-        "destinationId" : "10",
-        "id" : "20",
-        "sourceId" : "3",
-        "tags" : "Relationship"
-      } ],
-      "tags" : "Element,Software System"
-    }, {
-      "description" : "定期將 VTuber 資料由 CSV 轉換為 JSON 格式",
-      "documentation" : { },
-      "group" : "臺灣 VTuber 列表",
-      "id" : "4",
-      "location" : "Unspecified",
-      "name" : "VTuber 資料格式轉換",
-      "properties" : {
-        "structurizr.dsl.identifier" : "generatejsonscheduler"
-      },
-      "relationships" : [ {
-        "description" : "取得 VTuber 最新資料 (CSV)",
-        "destinationId" : "10",
-        "id" : "21",
-        "sourceId" : "4",
-        "tags" : "Relationship"
-      }, {
-        "description" : "取得 出道 VTuber 資料",
-        "destinationId" : "12",
-        "id" : "22",
-        "sourceId" : "4",
-        "tags" : "Relationship"
-      }, {
-        "description" : "產生 VTuber 最新資料 (JSON)",
-        "destinationId" : "11",
-        "id" : "23",
-        "sourceId" : "4",
-        "tags" : "Relationship"
-      } ],
-      "tags" : "Element,Software System"
-    }, {
       "description" : "提供 VTuber 各項資料",
       "documentation" : { },
       "group" : "臺灣 VTuber 列表",
-      "id" : "5",
+      "id" : "2",
       "location" : "Unspecified",
       "name" : "臺灣 VTuber 列表網頁",
       "properties" : {
@@ -117,27 +63,117 @@
       },
       "relationships" : [ {
         "description" : "取得 Git commit 紀錄",
-        "destinationId" : "8",
-        "id" : "24",
-        "sourceId" : "5",
-        "tags" : "Relationship"
-      }, {
-        "description" : "取得 VTuber 最新資料 API",
         "destinationId" : "9",
-        "id" : "25",
-        "sourceId" : "5",
+        "id" : "31",
+        "sourceId" : "2",
         "tags" : "Relationship"
       }, {
         "description" : "取得 VTuber 最新資料 API",
-        "destinationId" : "13",
-        "id" : "26",
-        "sourceId" : "5",
+        "destinationId" : "10",
+        "id" : "32",
+        "sourceId" : "2",
         "tags" : "Relationship"
       }, {
         "description" : "取得 VTuber 最新資料 API",
         "destinationId" : "14",
+        "id" : "33",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "取得 VTuber 最新資料 API",
+        "destinationId" : "15",
+        "id" : "34",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "取得網頁廣告 API",
+        "destinationId" : "18",
+        "id" : "35",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "定期從 YouTube Data API、Twitch Data API 取得 VTuber 各項資料",
+      "documentation" : { },
+      "group" : "維護者",
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "VTuber 資料撈取",
+      "properties" : {
+        "structurizr.dsl.identifier" : "datafetchscheduler"
+      },
+      "relationships" : [ {
+        "description" : "取得 VTuber 頻道資料",
+        "destinationId" : "7",
+        "id" : "23",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "description" : "取得 VTuber 頻道資料",
+        "destinationId" : "8",
+        "id" : "24",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "description" : "儲存 VTuber 各項資料 (CSV)",
+        "destinationId" : "11",
+        "id" : "25",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "定期將 VTuber 資料由 CSV 轉換為 JSON 格式",
+      "documentation" : { },
+      "group" : "維護者",
+      "id" : "5",
+      "location" : "Unspecified",
+      "name" : "VTuber 資料格式轉換",
+      "properties" : {
+        "structurizr.dsl.identifier" : "generatejsonscheduler"
+      },
+      "relationships" : [ {
+        "description" : "取得 VTuber 最新資料 (CSV)",
+        "destinationId" : "11",
+        "id" : "26",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "取得 出道 VTuber 資料",
+        "destinationId" : "13",
         "id" : "27",
         "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "產生 VTuber 最新資料 (JSON)",
+        "destinationId" : "12",
+        "id" : "28",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "定期更新網站廣告",
+      "documentation" : { },
+      "group" : "維護者",
+      "id" : "6",
+      "location" : "Unspecified",
+      "name" : "網頁廣告資料更新",
+      "properties" : {
+        "structurizr.dsl.identifier" : "advertisementupdatescheduler"
+      },
+      "relationships" : [ {
+        "description" : "取得網頁廣告最新資料 (CSV)",
+        "destinationId" : "16",
+        "id" : "29",
+        "sourceId" : "6",
+        "tags" : "Relationship"
+      }, {
+        "description" : "產生網頁廣告最新資料 (JSON)",
+        "destinationId" : "17",
+        "id" : "30",
+        "sourceId" : "6",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Software System"
@@ -145,7 +181,7 @@
       "description" : "提供 YouTube 頻道資料",
       "documentation" : { },
       "group" : "YouTube",
-      "id" : "6",
+      "id" : "7",
       "location" : "Unspecified",
       "name" : "YouTube Data API",
       "properties" : {
@@ -156,7 +192,7 @@
       "description" : "提供 Twitch 頻道資料",
       "documentation" : { },
       "group" : "Twitch",
-      "id" : "7",
+      "id" : "8",
       "location" : "Unspecified",
       "name" : "Twitch API",
       "properties" : {
@@ -166,8 +202,8 @@
     }, {
       "description" : "提供 GitHub commit 紀錄",
       "documentation" : { },
-      "group" : "GitHub",
-      "id" : "8",
+      "group" : "VTuber Data GitHub",
+      "id" : "9",
       "location" : "Unspecified",
       "name" : "GitHub API",
       "properties" : {
@@ -175,17 +211,17 @@
       },
       "relationships" : [ {
         "description" : "取得 Git commit 紀錄",
-        "destinationId" : "11",
-        "id" : "28",
-        "sourceId" : "8",
+        "destinationId" : "12",
+        "id" : "36",
+        "sourceId" : "9",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Software System,Existing System"
     }, {
       "description" : "提供 VTuber 最新資料 API",
       "documentation" : { },
-      "group" : "GitHub",
-      "id" : "9",
+      "group" : "VTuber Data GitHub",
+      "id" : "10",
       "location" : "Unspecified",
       "name" : "VTuber 資料 (GitHub API)",
       "properties" : {
@@ -193,17 +229,17 @@
       },
       "relationships" : [ {
         "description" : "取得 VTuber 最新資料",
-        "destinationId" : "11",
-        "id" : "29",
-        "sourceId" : "9",
+        "destinationId" : "12",
+        "id" : "37",
+        "sourceId" : "10",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Software System,Existing System"
     }, {
       "description" : "以 CSV 格式儲存 VTuber 最新資料",
       "documentation" : { },
-      "group" : "GitHub",
-      "id" : "10",
+      "group" : "VTuber Data GitHub",
+      "id" : "11",
       "location" : "Unspecified",
       "name" : "VTuber 資料儲存 (CSV)",
       "properties" : {
@@ -213,8 +249,8 @@
     }, {
       "description" : "以 JSON 格式儲存 VTuber 最新資料",
       "documentation" : { },
-      "group" : "GitHub",
-      "id" : "11",
+      "group" : "VTuber Data GitHub",
+      "id" : "12",
       "location" : "Unspecified",
       "name" : "VTuber 資料儲存 (JSON)",
       "properties" : {
@@ -224,8 +260,8 @@
     }, {
       "description" : "儲存出道 VTuber 資料，用於 VTuber 資料撈取功能無法取得出道資料時",
       "documentation" : { },
-      "group" : "GitHub",
-      "id" : "12",
+      "group" : "VTuber Data GitHub",
+      "id" : "13",
       "location" : "Unspecified",
       "name" : "出道 VTuber 資料儲存 (已棄用)",
       "properties" : {
@@ -236,7 +272,7 @@
       "description" : "提供 VTuber 最新資料 API",
       "documentation" : { },
       "group" : "Statically",
-      "id" : "13",
+      "id" : "14",
       "location" : "Unspecified",
       "name" : "VTuber 資料 (Statically API)",
       "properties" : {
@@ -244,9 +280,9 @@
       },
       "relationships" : [ {
         "description" : "取得 VTuber 最新資料",
-        "destinationId" : "11",
-        "id" : "30",
-        "sourceId" : "13",
+        "destinationId" : "12",
+        "id" : "38",
+        "sourceId" : "14",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Software System,Existing System"
@@ -254,7 +290,7 @@
       "description" : "提供 VTuber 最新資料 API",
       "documentation" : { },
       "group" : "jsDelivr",
-      "id" : "14",
+      "id" : "15",
       "location" : "Unspecified",
       "name" : "VTuber 資料 (jsDelivr API)",
       "properties" : {
@@ -262,9 +298,49 @@
       },
       "relationships" : [ {
         "description" : "取得 VTuber 最新資料",
-        "destinationId" : "11",
-        "id" : "31",
-        "sourceId" : "14",
+        "destinationId" : "12",
+        "id" : "39",
+        "sourceId" : "15",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System,Existing System"
+    }, {
+      "description" : "以 CSV 格式儲存網頁廣告",
+      "documentation" : { },
+      "group" : "Advertisement GitHub",
+      "id" : "16",
+      "location" : "Unspecified",
+      "name" : "網頁廣告資料儲存 (CSV)",
+      "properties" : {
+        "structurizr.dsl.identifier" : "advertisementcsvgitrepo"
+      },
+      "tags" : "Element,Software System,Git"
+    }, {
+      "description" : "以 JSON 格式儲存網頁廣告",
+      "documentation" : { },
+      "group" : "Advertisement GitHub",
+      "id" : "17",
+      "location" : "Unspecified",
+      "name" : "網頁廣告資料儲存 (JSON)",
+      "properties" : {
+        "structurizr.dsl.identifier" : "advertisementgitrepo"
+      },
+      "tags" : "Element,Software System,Git"
+    }, {
+      "description" : "提供網頁廣告 API",
+      "documentation" : { },
+      "group" : "Advertisement GitHub",
+      "id" : "18",
+      "location" : "Unspecified",
+      "name" : "網頁廣告資料 (GitHub API)",
+      "properties" : {
+        "structurizr.dsl.identifier" : "advertisementgithubapiservice"
+      },
+      "relationships" : [ {
+        "description" : "取得網頁廣告",
+        "destinationId" : "17",
+        "id" : "40",
+        "sourceId" : "18",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Software System,Existing System"
@@ -272,12 +348,12 @@
   },
   "name" : "Name",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgdXNlciA9IHBlcnNvbiAi57ay6aCB5L2/55So6ICFIgogICAgICAgIAogICAgICAgIGdyb3VwICLoh7rngaMgVlR1YmVyIOWIl+ihqCIgewogICAgICAgICAgICB2VHViZXJMaXN0TWFpbnRhaW5lciA9IHBlcnNvbiAiVlR1YmVyIOWQjeWWrue2reitt+iAhSIgIue2reittyBWVHViZXIg5ZCN5ZauIgogICAgICAgICAgICBkYXRhRmV0Y2hTY2hlZHVsZXIgPSBzb2Z0d2FyZVN5c3RlbSAiVlR1YmVyIOizh+aWmeaSiOWPliIgIuWumuacn+W+niBZb3VUdWJlIERhdGEgQVBJ44CBVHdpdGNoIERhdGEgQVBJIOWPluW+lyBWVHViZXIg5ZCE6aCF6LOH5paZIgogICAgICAgICAgICBnZW5lcmF0ZUpzb25TY2hlZHVsZXIgPSBzb2Z0d2FyZVN5c3RlbSAiVlR1YmVyIOizh+aWmeagvOW8j+i9ieaPmyIgIuWumuacn+WwhyBWVHViZXIg6LOH5paZ55SxIENTViDovYnmj5vngrogSlNPTiDmoLzlvI8iCiAgICAgICAgICAgIHdlYnNpdGUgPSBzb2Z0d2FyZVN5c3RlbSAi6Ie654GjIFZUdWJlciDliJfooajntrLpoIEiICLmj5DkvpsgVlR1YmVyIOWQhOmgheizh+aWmSIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgZ3JvdXAgIllvdVR1YmUiIHsKICAgICAgICAgICAgeW91VHViZURhdGFBcGkgPSBzb2Z0d2FyZVN5c3RlbSAiWW91VHViZSBEYXRhIEFQSSIgIuaPkOS+myBZb3VUdWJlIOmgu+mBk+izh+aWmSIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgZ3JvdXAgIlR3aXRjaCIgewogICAgICAgICAgICB0d2l0Y2hBcGkgPSBzb2Z0d2FyZVN5c3RlbSAiVHdpdGNoIEFQSSIgIuaPkOS+myBUd2l0Y2gg6aC76YGT6LOH5paZIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgIH0KICAgICAgICAKICAgICAgICBncm91cCAiR2l0SHViIiB7CiAgICAgICAgICAgIGdpdGh1YkFwaSA9IHNvZnR3YXJlU3lzdGVtICJHaXRIdWIgQVBJIiAi5o+Q5L6bIEdpdEh1YiBjb21taXQg57SA6YyEIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgICAgICB2VHViZXJEYXRhR2l0aHViQXBpU2VydmljZSA9IHNvZnR3YXJlU3lzdGVtICJWVHViZXIg6LOH5paZIChHaXRIdWIgQVBJKSIgIuaPkOS+myBWVHViZXIg5pyA5paw6LOH5paZIEFQSSIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICAgICAgY3N2R2l0UmVwbyA9IHNvZnR3YXJlU3lzdGVtICJWVHViZXIg6LOH5paZ5YSy5a2YIChDU1YpIiAi5LulIENTViDmoLzlvI/lhLLlrZggVlR1YmVyIOacgOaWsOizh+aWmSIgIkdpdCIKICAgICAgICAgICAganNvbkdpdFJlcG8gPSBzb2Z0d2FyZVN5c3RlbSAiVlR1YmVyIOizh+aWmeWEsuWtmCAoSlNPTikiICLku6UgSlNPTiDmoLzlvI/lhLLlrZggVlR1YmVyIOacgOaWsOizh+aWmSIgIkdpdCIKICAgICAgICAgICAgdlR1YmVyRGVidXRHaXRSZXBvID0gc29mdHdhcmVTeXN0ZW0gIuWHuumBkyBWVHViZXIg6LOH5paZ5YSy5a2YICjlt7Lmo4TnlKgpIiAi5YSy5a2Y5Ye66YGTIFZUdWJlciDos4fmlpnvvIznlKjmlrwgVlR1YmVyIOizh+aWmeaSiOWPluWKn+iDveeEoeazleWPluW+l+WHuumBk+izh+aWmeaZgiIgIkdpdCIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgZ3JvdXAgIlN0YXRpY2FsbHkiIHsKICAgICAgICAgICAgdlR1YmVyRGF0YVN0YXRpY2FsbHlBcGlTZXJ2aWNlID0gc29mdHdhcmVTeXN0ZW0gIlZUdWJlciDos4fmlpkgKFN0YXRpY2FsbHkgQVBJKSIgIuaPkOS+myBWVHViZXIg5pyA5paw6LOH5paZIEFQSSIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgZ3JvdXAgImpzRGVsaXZyIiB7CiAgICAgICAgICAgIHZUdWJlckRhdGFKc0RlbGl2ckFwaVNlcnZpY2UgPSBzb2Z0d2FyZVN5c3RlbSAiVlR1YmVyIOizh+aWmSAoanNEZWxpdnIgQVBJKSIgIuaPkOS+myBWVHViZXIg5pyA5paw6LOH5paZIEFQSSIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgIyByZWxhdGlvbnNoaXAKICAgICAgICB1c2VyIC0+IHdlYnNpdGUgIuS9v+eUqOe2sumggSIKICAgICAgICAKICAgICAgICB2VHViZXJMaXN0TWFpbnRhaW5lciAtPiBjc3ZHaXRSZXBvICLntq3orbcgVlR1YmVyIOWQjeWWriIKICAgICAgICB2VHViZXJMaXN0TWFpbnRhaW5lciAtPiB2VHViZXJEZWJ1dEdpdFJlcG8gIue2reitt+WHuumBkyBWVHViZXIg6LOH5paZIgogICAgICAgIAogICAgICAgIGRhdGFGZXRjaFNjaGVkdWxlciAtPiB5b3VUdWJlRGF0YUFwaSAi5Y+W5b6XIFZUdWJlciDpoLvpgZPos4fmlpkiCiAgICAgICAgZGF0YUZldGNoU2NoZWR1bGVyIC0+IHR3aXRjaEFwaSAi5Y+W5b6XIFZUdWJlciDpoLvpgZPos4fmlpkiCiAgICAgICAgZGF0YUZldGNoU2NoZWR1bGVyIC0+IGNzdkdpdFJlcG8gIuWEsuWtmCBWVHViZXIg5ZCE6aCF6LOH5paZIChDU1YpIgogICAgICAgIAogICAgICAgIGdlbmVyYXRlSnNvblNjaGVkdWxlciAtPiBjc3ZHaXRSZXBvICLlj5blvpcgVlR1YmVyIOacgOaWsOizh+aWmSAoQ1NWKSIKICAgICAgICBnZW5lcmF0ZUpzb25TY2hlZHVsZXIgLT4gdlR1YmVyRGVidXRHaXRSZXBvICLlj5blvpcg5Ye66YGTIFZUdWJlciDos4fmlpkiCiAgICAgICAgZ2VuZXJhdGVKc29uU2NoZWR1bGVyIC0+IGpzb25HaXRSZXBvICLnlKLnlJ8gVlR1YmVyIOacgOaWsOizh+aWmSAoSlNPTikiCiAgICAgICAgCiAgICAgICAgd2Vic2l0ZSAtPiBnaXRodWJBcGkgIuWPluW+lyBHaXQgY29tbWl0IOe0gOmMhCIKICAgICAgICB3ZWJzaXRlIC0+IHZUdWJlckRhdGFHaXRodWJBcGlTZXJ2aWNlICLlj5blvpcgVlR1YmVyIOacgOaWsOizh+aWmSBBUEkiCiAgICAgICAgd2Vic2l0ZSAtPiB2VHViZXJEYXRhU3RhdGljYWxseUFwaVNlcnZpY2UgIuWPluW+lyBWVHViZXIg5pyA5paw6LOH5paZIEFQSSIKICAgICAgICB3ZWJzaXRlIC0+IHZUdWJlckRhdGFKc0RlbGl2ckFwaVNlcnZpY2UgIuWPluW+lyBWVHViZXIg5pyA5paw6LOH5paZIEFQSSIKICAgICAgICAKICAgICAgICBnaXRodWJBcGkgLT4ganNvbkdpdFJlcG8gIuWPluW+lyBHaXQgY29tbWl0IOe0gOmMhCIKICAgICAgICAKICAgICAgICB2VHViZXJEYXRhR2l0aHViQXBpU2VydmljZSAtPiBqc29uR2l0UmVwbyAi5Y+W5b6XIFZUdWJlciDmnIDmlrDos4fmlpkiCiAgICAgICAgdlR1YmVyRGF0YVN0YXRpY2FsbHlBcGlTZXJ2aWNlIC0+IGpzb25HaXRSZXBvICLlj5blvpcgVlR1YmVyIOacgOaWsOizh+aWmSIKICAgICAgICB2VHViZXJEYXRhSnNEZWxpdnJBcGlTZXJ2aWNlIC0+IGpzb25HaXRSZXBvICLlj5blvpcgVlR1YmVyIOacgOaWsOizh+aWmSIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtbGFuZHNjYXBlICJTeXN0ZW1MYW5kc2NhcGUiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQogICAgICAgIAogICAgICAgIHN5c3RlbUNvbnRleHQgd2Vic2l0ZSAiU3lzdGVtQ29udGV4dCIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMxMTY4YmQKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIHBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDg0MjdiCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJHaXQiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICAKfQ=="
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgdXNlciA9IHBlcnNvbiAi57ay6aCB5L2/55So6ICFIgogICAgICAgIAogICAgICAgIGdyb3VwICLoh7rngaMgVlR1YmVyIOWIl+ihqCIgewogICAgICAgICAgICB3ZWJzaXRlID0gc29mdHdhcmVTeXN0ZW0gIuiHuueBoyBWVHViZXIg5YiX6KGo57ay6aCBIiAi5o+Q5L6bIFZUdWJlciDlkITpoIXos4fmlpkiCiAgICAgICAgfQoKICAgICAgICBncm91cCAi57at6K236ICFIiB7CiAgICAgICAgICAgIHZUdWJlckxpc3RNYWludGFpbmVyID0gcGVyc29uICJWVHViZXIg5ZCN5Zau57at6K236ICFIiAi57at6K23IFZUdWJlciDlkI3llq4iCiAgICAgICAgICAgIGRhdGFGZXRjaFNjaGVkdWxlciA9IHNvZnR3YXJlU3lzdGVtICJWVHViZXIg6LOH5paZ5pKI5Y+WIiAi5a6a5pyf5b6eIFlvdVR1YmUgRGF0YSBBUEnjgIFUd2l0Y2ggRGF0YSBBUEkg5Y+W5b6XIFZUdWJlciDlkITpoIXos4fmlpkiCiAgICAgICAgICAgIGdlbmVyYXRlSnNvblNjaGVkdWxlciA9IHNvZnR3YXJlU3lzdGVtICJWVHViZXIg6LOH5paZ5qC85byP6L2J5o+bIiAi5a6a5pyf5bCHIFZUdWJlciDos4fmlpnnlLEgQ1NWIOi9ieaPm+eCuiBKU09OIOagvOW8jyIKICAgICAgICAgICAgYWR2ZXJ0aXNlbWVudFVwZGF0ZVNjaGVkdWxlciA9IHNvZnR3YXJlU3lzdGVtICLntrLpoIHlu6PlkYros4fmlpnmm7TmlrAiICLlrprmnJ/mm7TmlrDntrLnq5nlu6PlkYoiCiAgICAgICAgfQogICAgICAgIAogICAgICAgIGdyb3VwICJZb3VUdWJlIiB7CiAgICAgICAgICAgIHlvdVR1YmVEYXRhQXBpID0gc29mdHdhcmVTeXN0ZW0gIllvdVR1YmUgRGF0YSBBUEkiICLmj5DkvpsgWW91VHViZSDpoLvpgZPos4fmlpkiICJFeGlzdGluZyBTeXN0ZW0iCiAgICAgICAgfQogICAgICAgIAogICAgICAgIGdyb3VwICJUd2l0Y2giIHsKICAgICAgICAgICAgdHdpdGNoQXBpID0gc29mdHdhcmVTeXN0ZW0gIlR3aXRjaCBBUEkiICLmj5DkvpsgVHdpdGNoIOmgu+mBk+izh+aWmSIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgZ3JvdXAgIlZUdWJlciBEYXRhIEdpdEh1YiIgewogICAgICAgICAgICBnaXRodWJBcGkgPSBzb2Z0d2FyZVN5c3RlbSAiR2l0SHViIEFQSSIgIuaPkOS+myBHaXRIdWIgY29tbWl0IOe0gOmMhCIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICAgICAgdlR1YmVyRGF0YUdpdGh1YkFwaVNlcnZpY2UgPSBzb2Z0d2FyZVN5c3RlbSAiVlR1YmVyIOizh+aWmSAoR2l0SHViIEFQSSkiICLmj5DkvpsgVlR1YmVyIOacgOaWsOizh+aWmSBBUEkiICJFeGlzdGluZyBTeXN0ZW0iCiAgICAgICAgICAgIGNzdkdpdFJlcG8gPSBzb2Z0d2FyZVN5c3RlbSAiVlR1YmVyIOizh+aWmeWEsuWtmCAoQ1NWKSIgIuS7pSBDU1Yg5qC85byP5YSy5a2YIFZUdWJlciDmnIDmlrDos4fmlpkiICJHaXQiCiAgICAgICAgICAgIGpzb25HaXRSZXBvID0gc29mdHdhcmVTeXN0ZW0gIlZUdWJlciDos4fmlpnlhLLlrZggKEpTT04pIiAi5LulIEpTT04g5qC85byP5YSy5a2YIFZUdWJlciDmnIDmlrDos4fmlpkiICJHaXQiCiAgICAgICAgICAgIHZUdWJlckRlYnV0R2l0UmVwbyA9IHNvZnR3YXJlU3lzdGVtICLlh7rpgZMgVlR1YmVyIOizh+aWmeWEsuWtmCAo5bey5qOE55SoKSIgIuWEsuWtmOWHuumBkyBWVHViZXIg6LOH5paZ77yM55So5pa8IFZUdWJlciDos4fmlpnmkojlj5blip/og73nhKHms5Xlj5blvpflh7rpgZPos4fmlpnmmYIiICJHaXQiCiAgICAgICAgfQogICAgICAgIAogICAgICAgIGdyb3VwICJTdGF0aWNhbGx5IiB7CiAgICAgICAgICAgIHZUdWJlckRhdGFTdGF0aWNhbGx5QXBpU2VydmljZSA9IHNvZnR3YXJlU3lzdGVtICJWVHViZXIg6LOH5paZIChTdGF0aWNhbGx5IEFQSSkiICLmj5DkvpsgVlR1YmVyIOacgOaWsOizh+aWmSBBUEkiICJFeGlzdGluZyBTeXN0ZW0iCiAgICAgICAgfQogICAgICAgIAogICAgICAgIGdyb3VwICJqc0RlbGl2ciIgewogICAgICAgICAgICB2VHViZXJEYXRhSnNEZWxpdnJBcGlTZXJ2aWNlID0gc29mdHdhcmVTeXN0ZW0gIlZUdWJlciDos4fmlpkgKGpzRGVsaXZyIEFQSSkiICLmj5DkvpsgVlR1YmVyIOacgOaWsOizh+aWmSBBUEkiICJFeGlzdGluZyBTeXN0ZW0iCiAgICAgICAgfQoKICAgICAgICBncm91cCAiQWR2ZXJ0aXNlbWVudCBHaXRIdWIiIHsKICAgICAgICAgICAgYWR2ZXJ0aXNlbWVudENzdkdpdFJlcG8gPSBzb2Z0d2FyZVN5c3RlbSAi57ay6aCB5buj5ZGK6LOH5paZ5YSy5a2YIChDU1YpIiAi5LulIENTViDmoLzlvI/lhLLlrZjntrLpoIHlu6PlkYoiICJHaXQiCiAgICAgICAgICAgIGFkdmVydGlzZW1lbnRHaXRSZXBvID0gc29mdHdhcmVTeXN0ZW0gIue2sumggeW7o+WRiuizh+aWmeWEsuWtmCAoSlNPTikiICLku6UgSlNPTiDmoLzlvI/lhLLlrZjntrLpoIHlu6PlkYoiICJHaXQiCiAgICAgICAgICAgIGFkdmVydGlzZW1lbnRHaXRodWJBcGlTZXJ2aWNlID0gc29mdHdhcmVTeXN0ZW0gIue2sumggeW7o+WRiuizh+aWmSAoR2l0SHViIEFQSSkiICLmj5DkvpvntrLpoIHlu6PlkYogQVBJIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgIH0KICAgICAgICAKICAgICAgICAjIHJlbGF0aW9uc2hpcAogICAgICAgIHVzZXIgLT4gd2Vic2l0ZSAi5L2/55So57ay6aCBIgogICAgICAgIAogICAgICAgIHZUdWJlckxpc3RNYWludGFpbmVyIC0+IGNzdkdpdFJlcG8gIue2reittyBWVHViZXIg5ZCN5ZauIgogICAgICAgIHZUdWJlckxpc3RNYWludGFpbmVyIC0+IHZUdWJlckRlYnV0R2l0UmVwbyAi57at6K235Ye66YGTIFZUdWJlciDos4fmlpkiCiAgICAgICAgdlR1YmVyTGlzdE1haW50YWluZXIgLT4gYWR2ZXJ0aXNlbWVudENzdkdpdFJlcG8gIue2reitt+W7o+WRiuizh+aWmSIKICAgICAgICAKICAgICAgICBkYXRhRmV0Y2hTY2hlZHVsZXIgLT4geW91VHViZURhdGFBcGkgIuWPluW+lyBWVHViZXIg6aC76YGT6LOH5paZIgogICAgICAgIGRhdGFGZXRjaFNjaGVkdWxlciAtPiB0d2l0Y2hBcGkgIuWPluW+lyBWVHViZXIg6aC76YGT6LOH5paZIgogICAgICAgIGRhdGFGZXRjaFNjaGVkdWxlciAtPiBjc3ZHaXRSZXBvICLlhLLlrZggVlR1YmVyIOWQhOmgheizh+aWmSAoQ1NWKSIKICAgICAgICAKICAgICAgICBnZW5lcmF0ZUpzb25TY2hlZHVsZXIgLT4gY3N2R2l0UmVwbyAi5Y+W5b6XIFZUdWJlciDmnIDmlrDos4fmlpkgKENTVikiCiAgICAgICAgZ2VuZXJhdGVKc29uU2NoZWR1bGVyIC0+IHZUdWJlckRlYnV0R2l0UmVwbyAi5Y+W5b6XIOWHuumBkyBWVHViZXIg6LOH5paZIgogICAgICAgIGdlbmVyYXRlSnNvblNjaGVkdWxlciAtPiBqc29uR2l0UmVwbyAi55Si55SfIFZUdWJlciDmnIDmlrDos4fmlpkgKEpTT04pIgoKICAgICAgICBhZHZlcnRpc2VtZW50VXBkYXRlU2NoZWR1bGVyIC0+IGFkdmVydGlzZW1lbnRDc3ZHaXRSZXBvICLlj5blvpfntrLpoIHlu6PlkYrmnIDmlrDos4fmlpkgKENTVikiCiAgICAgICAgYWR2ZXJ0aXNlbWVudFVwZGF0ZVNjaGVkdWxlciAtPiBhZHZlcnRpc2VtZW50R2l0UmVwbyAi55Si55Sf57ay6aCB5buj5ZGK5pyA5paw6LOH5paZIChKU09OKSIKICAgICAgICAKICAgICAgICB3ZWJzaXRlIC0+IGdpdGh1YkFwaSAi5Y+W5b6XIEdpdCBjb21taXQg57SA6YyEIgogICAgICAgIHdlYnNpdGUgLT4gdlR1YmVyRGF0YUdpdGh1YkFwaVNlcnZpY2UgIuWPluW+lyBWVHViZXIg5pyA5paw6LOH5paZIEFQSSIKICAgICAgICB3ZWJzaXRlIC0+IHZUdWJlckRhdGFTdGF0aWNhbGx5QXBpU2VydmljZSAi5Y+W5b6XIFZUdWJlciDmnIDmlrDos4fmlpkgQVBJIgogICAgICAgIHdlYnNpdGUgLT4gdlR1YmVyRGF0YUpzRGVsaXZyQXBpU2VydmljZSAi5Y+W5b6XIFZUdWJlciDmnIDmlrDos4fmlpkgQVBJIgogICAgICAgIHdlYnNpdGUgLT4gYWR2ZXJ0aXNlbWVudEdpdGh1YkFwaVNlcnZpY2UgIuWPluW+l+e2sumggeW7o+WRiiBBUEkiCiAgICAgICAgCiAgICAgICAgZ2l0aHViQXBpIC0+IGpzb25HaXRSZXBvICLlj5blvpcgR2l0IGNvbW1pdCDntIDpjIQiCiAgICAgICAgCiAgICAgICAgdlR1YmVyRGF0YUdpdGh1YkFwaVNlcnZpY2UgLT4ganNvbkdpdFJlcG8gIuWPluW+lyBWVHViZXIg5pyA5paw6LOH5paZIgogICAgICAgIHZUdWJlckRhdGFTdGF0aWNhbGx5QXBpU2VydmljZSAtPiBqc29uR2l0UmVwbyAi5Y+W5b6XIFZUdWJlciDmnIDmlrDos4fmlpkiCiAgICAgICAgdlR1YmVyRGF0YUpzRGVsaXZyQXBpU2VydmljZSAtPiBqc29uR2l0UmVwbyAi5Y+W5b6XIFZUdWJlciDmnIDmlrDos4fmlpkiCiAgICAgICAgYWR2ZXJ0aXNlbWVudEdpdGh1YkFwaVNlcnZpY2UgLT4gYWR2ZXJ0aXNlbWVudEdpdFJlcG8gIuWPluW+l+e2sumggeW7o+WRiiIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtbGFuZHNjYXBlICJTeXN0ZW1MYW5kc2NhcGUiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQogICAgICAgIAogICAgICAgIHN5c3RlbUNvbnRleHQgd2Vic2l0ZSAiU3lzdGVtQ29udGV4dCIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dAogICAgICAgIH0KCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMxMTY4YmQKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIHBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDg0MjdiCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJHaXQiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICAKfQ=="
   },
   "views" : {
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "SystemLandscape",
+      "lastSavedView" : "SystemContext",
       "metadataSymbols" : "SquareBrackets",
       "styles" : {
         "elements" : [ {
@@ -312,56 +388,62 @@
       },
       "dimensions" : {
         "height" : 2074,
-        "width" : 3140
+        "width" : 3890
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 1369,
+        "x" : 1744,
         "y" : 165
       }, {
-        "id" : "5",
-        "x" : 1344,
+        "id" : "2",
+        "x" : 1719,
         "y" : 865
       }, {
-        "id" : "8",
-        "x" : 969,
-        "y" : 1465
-      }, {
         "id" : "9",
-        "x" : 219,
-        "y" : 1465
-      }, {
-        "id" : "13",
         "x" : 1719,
         "y" : 1465
       }, {
-        "id" : "14",
+        "id" : "10",
         "x" : 2469,
+        "y" : 1465
+      }, {
+        "id" : "14",
+        "x" : 969,
+        "y" : 1465
+      }, {
+        "id" : "15",
+        "x" : 3219,
+        "y" : 1465
+      }, {
+        "id" : "18",
+        "x" : 219,
         "y" : 1465
       } ],
       "enterpriseBoundaryVisible" : true,
       "key" : "SystemContext",
       "order" : 2,
       "relationships" : [ {
-        "id" : "15"
+        "id" : "19"
       }, {
-        "id" : "24"
+        "id" : "31"
       }, {
-        "id" : "25",
+        "id" : "32"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "34",
         "vertices" : [ {
-          "x" : 819,
+          "x" : 3098,
           "y" : 1361
         } ]
       }, {
-        "id" : "26"
-      }, {
-        "id" : "27",
+        "id" : "35",
         "vertices" : [ {
-          "x" : 2348,
+          "x" : 790,
           "y" : 1361
         } ]
       } ],
-      "softwareSystemId" : "5"
+      "softwareSystemId" : "2"
     } ],
     "systemLandscapeViews" : [ {
       "dimensions" : {
@@ -370,73 +452,81 @@
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 3155,
-        "y" : 165
+        "x" : 4350,
+        "y" : 835
       }, {
         "id" : "2",
-        "x" : 1257,
-        "y" : 745
+        "x" : 3695,
+        "y" : 865
       }, {
         "id" : "3",
-        "x" : 725,
-        "y" : 795
+        "x" : 1225,
+        "y" : 950
       }, {
         "id" : "4",
-        "x" : 1740,
-        "y" : 795
+        "x" : 695,
+        "y" : 1000
       }, {
         "id" : "5",
-        "x" : 3130,
-        "y" : 795
+        "x" : 1715,
+        "y" : 1000
       }, {
         "id" : "6",
-        "x" : 85,
-        "y" : 565
+        "x" : 1715,
+        "y" : 1345
       }, {
         "id" : "7",
-        "x" : 85,
-        "y" : 1020
+        "x" : 80,
+        "y" : 565
       }, {
         "id" : "8",
-        "x" : 2615,
-        "y" : 1450
+        "x" : 80,
+        "y" : 1000
       }, {
         "id" : "9",
-        "x" : 3130,
-        "y" : 1450
+        "x" : 2690,
+        "y" : 430
       }, {
         "id" : "10",
-        "x" : 725,
-        "y" : 1450
+        "x" : 2690,
+        "y" : 85
       }, {
         "id" : "11",
-        "x" : 3130,
-        "y" : 2035
+        "x" : 695,
+        "y" : 85
       }, {
         "id" : "12",
-        "x" : 1740,
-        "y" : 1450
+        "x" : 1715,
+        "y" : 85
       }, {
         "id" : "13",
-        "x" : 4185,
-        "y" : 1450
+        "x" : 1200,
+        "y" : 85
       }, {
         "id" : "14",
-        "x" : 3640,
-        "y" : 1450
+        "x" : 2690,
+        "y" : 1315
+      }, {
+        "id" : "15",
+        "x" : 2690,
+        "y" : 860
+      }, {
+        "id" : "16",
+        "x" : 1200,
+        "y" : 1815
+      }, {
+        "id" : "17",
+        "x" : 1715,
+        "y" : 1815
+      }, {
+        "id" : "18",
+        "x" : 2690,
+        "y" : 1815
       } ],
       "enterpriseBoundaryVisible" : true,
       "key" : "SystemLandscape",
       "order" : 1,
       "relationships" : [ {
-        "id" : "15"
-      }, {
-        "id" : "16"
-      }, {
-        "id" : "17"
-      }, {
-        "id" : "18"
-      }, {
         "id" : "19"
       }, {
         "id" : "20"
@@ -445,38 +535,49 @@
       }, {
         "id" : "22"
       }, {
-        "id" : "23",
-        "vertices" : [ {
-          "x" : 2500,
-          "y" : 1365
-        }, {
-          "x" : 2500,
-          "y" : 1950
-        } ]
+        "id" : "23"
       }, {
         "id" : "24"
       }, {
         "id" : "25"
       }, {
-        "id" : "26"
+        "id" : "26",
+        "vertices" : [ {
+          "x" : 1550,
+          "y" : 555
+        } ]
       }, {
-        "id" : "27"
+        "id" : "27",
+        "vertices" : [ {
+          "x" : 1745,
+          "y" : 560
+        } ]
       }, {
         "id" : "28"
       }, {
         "id" : "29"
       }, {
-        "id" : "30",
-        "vertices" : [ {
-          "x" : 4410,
-          "y" : 2030
-        } ]
+        "id" : "30"
       }, {
-        "id" : "31",
-        "vertices" : [ {
-          "x" : 3870,
-          "y" : 1990
-        } ]
+        "id" : "31"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "33"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "35"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "38"
+      }, {
+        "id" : "39"
+      }, {
+        "id" : "40"
       } ]
     } ]
   }
