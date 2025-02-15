@@ -10,6 +10,7 @@
   - [YouTube Data API](#youtube-data-api)
   - [Twitch API](#twitch-api)
   - [GitHub](#github)
+  - [jsDelivr](#jsdelivr)
   - [Statically](#statically)
 
 # 臺灣 VTuber 列表系統架構說明
@@ -75,9 +76,13 @@
 
 [臺灣 VTuber 列表網頁](#臺灣-vtuber-列表網頁)使用 [GitHub API](https://docs.github.com/en/rest) 存取 [VTuber 資料儲存 (JSON)](#vtuber-資料儲存-json) 檔案作為資料 API。
 
+## jsDelivr
+
+除了使用 GitHub API 外，[臺灣 VTuber 列表網頁](#臺灣-vtuber-列表網頁)也會使用 [jsDelivr](https://www.jsdelivr.com/) 提供的 API 存取 [VTuber 資料儲存 (JSON)](#vtuber-資料儲存-json)。
+
 ## Statically
 
 除了使用 GitHub API 外，[臺灣 VTuber 列表網頁](#臺灣-vtuber-列表網頁)也會使用 [Statically](https://statically.io/) 提供的 API 存取 [VTuber 資料儲存 (JSON)](#vtuber-資料儲存-json)。
 
-兩種方式提供了相同的 API 格式，因此使用者可以簡單地透過網頁調整 API 來源：
+三種方式提供了相同的 API 格式，因此使用者可以簡單地透過網頁調整 API 來源：
 ![](./image/api-source.png)
