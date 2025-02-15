@@ -3,8 +3,7 @@
   "description" : "Description",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2025-02-15T12:53:24Z",
+  "lastModifiedDate" : "2025-02-15T12:55:11Z",
   "model" : {
     "people" : [ {
       "id" : "1",
@@ -353,8 +352,7 @@
   "views" : {
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "SystemContext",
-      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "SystemLandscape",
       "styles" : {
         "elements" : [ {
           "background" : "#1168bd",
@@ -378,7 +376,7 @@
     },
     "systemContextViews" : [ {
       "automaticLayout" : {
-        "applied" : true,
+        "applied" : false,
         "edgeSeparation" : 0,
         "implementation" : "Graphviz",
         "nodeSeparation" : 300,
@@ -386,38 +384,34 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "dimensions" : {
-        "height" : 2074,
-        "width" : 3890
-      },
       "elements" : [ {
         "id" : "1",
-        "x" : 1744,
-        "y" : 165
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "2",
-        "x" : 1719,
-        "y" : 865
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "9",
-        "x" : 1719,
-        "y" : 1465
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "10",
-        "x" : 2469,
-        "y" : 1465
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "14",
-        "x" : 969,
-        "y" : 1465
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "15",
-        "x" : 3219,
-        "y" : 1465
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "18",
-        "x" : 219,
-        "y" : 1465
+        "x" : 0,
+        "y" : 0
       } ],
       "enterpriseBoundaryVisible" : true,
       "key" : "SystemContext",
@@ -431,29 +425,21 @@
       }, {
         "id" : "33"
       }, {
-        "id" : "34",
-        "vertices" : [ {
-          "x" : 3098,
-          "y" : 1361
-        } ]
+        "id" : "34"
       }, {
-        "id" : "35",
-        "vertices" : [ {
-          "x" : 790,
-          "y" : 1361
-        } ]
+        "id" : "35"
       } ],
       "softwareSystemId" : "2"
     } ],
     "systemLandscapeViews" : [ {
       "dimensions" : {
         "height" : 2774,
-        "width" : 6748
+        "width" : 5000
       },
       "elements" : [ {
         "id" : "1",
         "x" : 4350,
-        "y" : 835
+        "y" : 815
       }, {
         "id" : "2",
         "x" : 3695,
